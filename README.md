@@ -19,12 +19,11 @@ This repository contains the complete analytical workflow for modelling Patagoni
 
 ### Key Findings
 
-- Successfully modeled median age and length distributions for both regions
+- Successfully modelled median age and length distributions for both regions
 - Identified critical environmental drivers: fishing depth, ocean temperature, mixed layer depth, and salinity
 - Generated high-resolution prediction maps at BRAN (~10km) and GEBCO (~500m) resolutions
-- Corrected methodological issues with gear type classification (GearPurpose vs Gear)
-- Applied rigorous collinearity analysis and outlier detection protocols
-
+- Applied rigorous collinearity analysis,outlier detection protocols
+ 
 ---
 
 ## Repository Structure
@@ -92,19 +91,24 @@ The raw data files originate from the Australian Toothfish Observation Program (
 
 ### 2. Final Datasets
 
-Cleaned, standardized, and model-ready datasets used for final GAM fitting:
+Cleaned, standardised, and model-ready datasets used for final GAM fitting:
 
 #### HIMI Datasets:
 - `final_himi_age_data_stage3.rds`: Haul-level aggregated age data (n ≈ 8,000 hauls)
 - `final_himi_length_data_stage3.rds`: Haul-level aggregated length data (n ≈ 52,000 hauls)
 
 #### MI Datasets:
-- `final_mi_age_data_stage3.rds`: Haul-level aggregated age data (n ≈ 3,500 hauls)
-- `final_mi_length_data_stage3.rds`: Haul-level aggregated length data (n ≈ 18,000 hauls)
+- `final_mi_age_data_stage3.rds`: Individual mean age data (n ≈ 9,863)
+- `final_mi_length_data_stage3.rds`: Haul-level aggregated length data (n ≈ ~4000 hauls)
 
 #### Variables Included:
 **Response Variables:**
-- `Median_Age`: Median age per haul (years)
+**HIMI**
+- - `Median_Age`: Median age per haul (years)
+- `Median_TL`: Median total length per haul (mm)
+
+**Macquarie Island** 
+- 'Mean Age' - Mean age per observation (decimal years)
 - `Median_TL`: Median total length per haul (mm)
 
 **Environmental Predictors:**
@@ -121,11 +125,12 @@ Cleaned, standardized, and model-ready datasets used for final GAM fitting:
 **Temporal Variables:**
 - `Year`: Year of capture (categorical)
 - `Month`: Month of capture (cyclic smooth)
-- `Day_of_year`: Julian day (1-365)
 - `Biological_Season`: Spawning/non-spawning
 
 **Operational Variables:**
+HIMI
 - `GearPurpose`: Gear type and fishing purpose (4 levels: Commercial Longline, Research Longline, Commercial Trawl, Research Trawl)
+MI -
 - `Gear`: Simplified gear type (2 levels: Longline, Trawl)
 
 ### 3. Final Models

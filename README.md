@@ -1,14 +1,14 @@
 # Patagonian_toothfish_himi_macca_2025
 Modelling the spatial distribution of Patagonian toothfish in two sub-Antarctic regions
-# Toothfish Age and Length Distribution Modeling in Subantarctic Waters
 
 **Author:** Naomi Forrest  
+** Master's project - Institute of Marine and Antarctic Science (SZ7)
 **Project Duration:** 2024-2025  
 **Regions:** Heard Island & McDonald Islands (HIMI) and Macquarie Island (MI)
 
 ## Project Overview
 
-This repository contains the complete analytical workflow for modeling Patagonian toothfish (*Dissostichus eleginoides*) age and length distributions across two critical Subantarctic fishing regions. The research applies Generalized Additive Models (GAMs) to understand spatial, temporal, and environmental drivers of toothfish population structure, providing crucial insights for fisheries management and conservation.
+This repository contains the complete analytical workflow for modelling Patagonian toothfish (*Dissostichus eleginoides*) age and length distributions across two critical Subantarctic fishing regions. The research applies Generalised Additive Models (GAMs) using age and lenght data from the Heard Island McDonald Island and Macquarie Island fisheries to understand spatial, temporal, and environmental drivers of toothfish population structure, providing crucial insights for fisheries management and conservation.
 
 ### Research Objectives
 
